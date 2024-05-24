@@ -8,29 +8,86 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-mfizz/font-mfizz.css">
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="" alt="">
-        </div>
-        <nav class="nav">
-            <ul class="nav_list">
-                <li class="nav_item"><a href="">Home</a></li>
-                <li class="nav_item"><a href="">Projects</a></li>
-                <li class="nav_item"><a href="">Interests</a></li>
-                <li class="nav_item"><a href="">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Intro -->
-    <section class="intro" id="home">
-        <h1 class="section_title">
+<body id="page-top">
+    <!-- Header -->
+    <div class="header">
+        <!-- <div class="logo">
             <strong>Adam Adl</strong>
-        </h1>
-        <p class="section_subtitle"></p>
-        <img src="" alt="">
-    </section>
+        </div> -->
+        <h1><a href="#page-top">Adam Adl</a></h1>
+        <ul class="header-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><b> <i class="fa-solid fa-file-pdf"></i> Resume</b></a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="photo">
+            <img class="self-photo" src="img/self-image.jpg" alt="">
+        </div>
+        <div class="main">
+            <h1 class="title">Adam Adl</h1>
+            <p class="subtext">Major: Computer Science &#x2022; Minor: Creative Technology & Design &#x2022; CU Boulder</p>
+        </div>
+    </div>
+    
+    <!-- Skills -->
+    <div class="info-subtitle" id="skills">Skills</div>
+    <div class="information">
+        <div class="card">
+            <!-- <img src="img/photo1.png" class="skill"> -->
+            <div class="icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="skill-text">this is some subtext under an illustration of an image</div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="skill-text">this is some subtext under an illustration of an image</div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa icon-cplusplus fa-2x" style="padding-top:15px; font-size: 4rem;"></i>
+            </div>
+            <div class="skill-text">this is some subtext under an illustration of an image</div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa icon-scala fa-2x" style="padding-top:15px; margin-left:20px; margin-bottom: 10px; font-size: 4rem;"></i>
+            </div>
+            <div class="skill-text">this is some subtext under an illustration of an image</div>
+        </div>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote">
+        <div class="text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice</div>
+        <div class="author">- Thor, God of Thunder</div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="call">
+        <div class="left">
+            <p>Call to action! It's time</p>
+            <p>Sign up for our product by clicking the button right over there!</p>
+        </div>
+        <div class="right">
+            <button class="sign-up2">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright @ The Odin Project 2021
+    </div>
 </body>
 </html>
