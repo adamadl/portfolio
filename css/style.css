@@ -9,6 +9,7 @@
 body {
   height: 100vh;
   margin: 0;
+  padding: 0;
   overflow: auto;
   font-family: Montserrat, Helvetica, sans-serif;
   display: flex;
@@ -23,16 +24,17 @@ a{
     transition: color 0.2s;
 }
 
-.logo{
-    font-size: 35px;
+.logo a{
+    font-size: 40px;
     font-weight: bolder;
     transition: color 0.2s;
+    margin: 1.2rem;
 }
 
-.header-links{
-    display: flex;
+.header-links ul{
     margin: 0;
     padding: 0;
+    display: flex;
     list-style: none;
     gap: 24px;
     font-size: 20px;
@@ -40,31 +42,50 @@ a{
 
 .header{
     background-color: transparent;
-    padding: 50px;
+    /* padding: 50px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex: 1;
     position: fixed;
     width: 100%;
-    height: 20px;
-    transition: 0.2s;
+    /* height: 20px; */
+    transition: 0.5s;
 }
 
-.header.shrunk{
+.toggle-button{
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* .header.shrunk{
     padding: 30px;
-}
+} */
 
-.header.shrunk .logo {
+.header.shrunk .logo a{
     font-size: 28px; /* Shrink the h1 font size */
 }
 
-.header.shrunk .header-links {
+.header.shrunk .header-links ul {
     font-size: 16px; /* Shrink the link font size */
 }
 
-.header-links a:hover, .logo:hover{
-    color: rgb(235, 187, 16);
+.header-links a:hover, .logo a:hover{
+    color: rgb(161, 171, 170);
 }
 
 /* Main content under header*/
@@ -105,11 +126,16 @@ a{
 /* About Me */
 .about-section{
     display: flex;
+    justify-content: center;
     padding: 80px;
     padding-left: 400px;
     padding-top: 80px;
     padding-bottom: 80px;
     gap: 50px;
+}
+
+h3{
+    padding-top: 20px;
 }
 
 .about-photo{
@@ -134,18 +160,18 @@ a button:hover{
     background-color: black;
 } */
 
-button {
+/* button {
     border: none;
     border-radius: 8px;
     background: #4e535c;
     padding: 8px 20px;
     font-size: 20px;
     color: white;
-}
+} */
 
 .socials{
     display: flex;
-    padding-top: 55px;
+    padding-top: 15px;
     gap: 20px;
 }
 
@@ -164,7 +190,7 @@ button {
 }
 
 .icon-social:hover{
-    background-color: black;
+    background-color: rgb(54, 50, 50);
 }
 
 /* Skills */
@@ -259,8 +285,12 @@ button {
 .contact p a{
     color: rgb(11, 179, 230);
     text-decoration: underline;
+    transition: 0.2s;
 }
 
+.contact p a:hover{
+    color: rgb(11, 120, 230);
+}
 /* Footer */
 
 .footer {
@@ -271,7 +301,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: black;
+    background-color: black;
     padding: 20px;
     color: white;
     gap: 20px;
@@ -296,5 +326,80 @@ button {
 }
 
 .icon-footer:hover{
-    background-color: rgb(235, 187, 16);
+    background-color: rgb(118, 124, 123);
+}
+
+@media (max-width: 800px) {
+    .toggle-button{
+        display: flex;
+    }
+
+    .header-links{
+        display: none;
+        width: 100%;
+    }
+
+    .header{
+        background-color: black;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo a{
+        font-size: 28px;
+    }
+
+    .header-links ul{
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+        gap: 18px;
+    }
+    
+    .header-links li a  {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .header-links.active{
+        display: flex;
+    }
+
+    .about-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 50px;
+        gap: 50px;
+    }
+
+    .self-photo{
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+    }
+
+    .socials{
+        justify-content: center;
+    }
+
+    .information{
+        grid-template-columns: 1fr;
+    }
+    
+    .project-section{
+        grid-template-columns: auto;
+    }
+
+    .project-img{
+        width: 300px;
+    }
+
+    .contact{
+        margin: 0px;
+    }
 }
