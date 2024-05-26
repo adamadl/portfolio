@@ -31,7 +31,7 @@ function scrollFunction() {
         }
     }
     else{
-        nav.style.backgroundColor = "black";
+        nav.style.backgroundColor = "#1f2937";
         nav.classList.remove("shrunk");
     }
 }
