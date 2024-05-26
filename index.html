@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam Adl Portfolio</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font-mfizz/font-mfizz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="js/index.js"></script>
 </head>
 <body id="page-top">
     <!-- Header -->
-    <div class="header">
-        <!-- <div class="logo">
-            <strong>Adam Adl</strong>
-        </div> -->
-        <h1><a href="#page-top">Adam Adl</a></h1>
+    <div id="nav" class="header">
+        <a href="#page-top"><p class="logo">Adam Adl<p></a>
         <ul class="header-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#project">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><b> <i class="fa-solid fa-file-pdf"></i> Resume</b></a>
             </li>
@@ -30,11 +30,29 @@
     <!-- Main Content -->
     <div class="content">
         <div class="photo">
-            <img class="self-photo" src="img/self-image.jpg" alt="">
+            <img class="self-photo" src="img/self-image.png" alt="">
         </div>
         <div class="main">
             <h1 class="title">Adam Adl</h1>
             <p class="subtext">Major: Computer Science &#x2022; Minor: Creative Technology & Design &#x2022; CU Boulder</p>
+        </div>
+    </div>
+
+    <!-- About Me -->
+    <div class="about-section" id="about">
+        <div class="photo">
+            <img class="about-photo" src="img/self-image2.jpg">
+        </div>
+        <div class="about-subtext">
+            <h2>Adam Adl</h2>
+            <p>CU Boulder '25 &#x2022; BS Computer Science</p>
+            <p class="text">I am currently a 3rd year at the University of Colorado Boulder, pursuing a bachelor's in Computer Science with a minor in Creative Technology and Design. My interests include software development, front end development, AI and Machine Learning, and game development.</p>
+            <div class="socials">
+                <div><a class="icon-social" href="https://www.facebook.com/adam.adl.92" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></div>
+                <div><a class="icon-social" href="https://www.instagram.com/adamadl22/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></div>
+                <div><a class="icon-social" href="https://www.linkedin.com/in/adamadl/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div><a class="icon-social" href="https://github.com/adamadl" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></div>
+            </div>
         </div>
     </div>
     
@@ -46,48 +64,94 @@
             <div class="icon">
                 <i class="fa-solid fa-code"></i>
             </div>
-            <div class="skill-text">this is some subtext under an illustration of an image</div>
+            <h3 class="skill-text">HTML, CSS, JavaScript</h3>
+            <p>With 3 years of experience through coursework and personal projects, I have developed several applications consisting of HTML/JavaScript/CSS, various web libraries and APIs, and a Node.js backend.</p>
         </div>
         <div class="card">
             <div class="icon">
                 <i class="fa-brands fa-python"></i>
             </div>
-            <div class="skill-text">this is some subtext under an illustration of an image</div>
+            <h3 class="skill-text">Python</h3>
+            <p>Over the past 3 years, I have had extensive experience in python through different classes including Data Science, Artificial Intelligence, and Discrete Structures.</p>
         </div>
         <div class="card">
             <div class="icon">
-                <i class="fa icon-cplusplus fa-2x" style="padding-top:15px; font-size: 4rem;"></i>
+                <i class="fa icon-c fa-2x" style="padding-top:15px; margin-left: 13px; font-size: 4rem;"></i>
             </div>
-            <div class="skill-text">this is some subtext under an illustration of an image</div>
+            <h3 class="skill-text">C/C++</h3>
+            <p>I have had 4 years of experience in C and C++ utilized in classes such as Operating Systems, Computer Systems, and Data Structures.</p>
         </div>
         <div class="card">
             <div class="icon">
                 <i class="fa icon-scala fa-2x" style="padding-top:15px; margin-left:20px; margin-bottom: 10px; font-size: 4rem;"></i>
             </div>
-            <div class="skill-text">this is some subtext under an illustration of an image</div>
+            <h3 class="skill-text">Scala</h3>
+            <p>More recently, over the past year, I have developed skills in objected-oriented programming languages such as Scala which has allowed me to further develop my skills as a programmer.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa icon-database-alt2 fa-2x" style="padding-top:15px; margin-left: 15px; margin-bottom: 5px;font-size: 4rem;"></i>
+            </div>
+            <h3 class="skill-text">SQL</h3>
+            <p>Through course work, I have developed the necessary skill in creating an SQL database, as well the necessary precautions required to ensure it is secure.</p>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <h3 class="skill-text">GitHub</h3>
+            <p>Over the course of 4 years, I have learned helpful project management skills utilizing GitHub that has allowed me to stay organized and manage team projects better.</p>
         </div>
     </div>
 
-    <!-- Quote -->
-    <div class="quote">
-        <div class="text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice</div>
-        <div class="author">- Thor, God of Thunder</div>
+    <!-- Projects -->
+    <div class="project-subtitle" id="project">Projects</div>
+    <div class="project-section">
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
+        <div>
+            <img class="project-img" src="img/placeholder.png">
+        </div>
     </div>
 
     <!-- Call to Action -->
-    <div class="call">
-        <div class="left">
-            <p>Call to action! It's time</p>
-            <p>Sign up for our product by clicking the button right over there!</p>
-        </div>
-        <div class="right">
-            <button class="sign-up2">Sign Up</button>
-        </div>
+    <div class="contact" id="contact">
+        <div class="contact-subtitle">Contact Me</div>
+        <p>Email: <a href="mailto:adamadl80526@gmail.com">adamadl80526@gmail.com</a> <b>||</b> <a href="mailto:adamadl80526@gmail.com">adad8283@colorado.edu</a></p>
+        <p>Phone: <a href="tel:970-290-6237">(970) 290-6237</a></p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        Copyright @ The Odin Project 2021
+        <div><p>Copyright @ Adam Adl 2024</p></div>
+        <div class="socials-footer">
+            <div><a class="icon-footer" href="https://www.facebook.com/adam.adl.92" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></div>
+            <div><a class="icon-footer" href="https://www.instagram.com/adamadl22/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></div>
+            <div><a class="icon-footer" href="https://www.linkedin.com/in/adamadl/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            <div><a class="icon-footer" href="https://github.com/adamadl" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></div>
+        </div>
     </div>
 </body>
 </html>
