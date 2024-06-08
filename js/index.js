@@ -7,12 +7,23 @@ window.onresize = function() {scrollFunction()};
 //     navbarLinks.classList.toggle('active');
 // })
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementsByClassName('toggle-button')[0];
-    const navbarLinks = document.getElementsByClassName('header-links')[0];
-    toggleBtn.addEventListener('click', () => {
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+    const navLinks = document.querySelectorAll('.navbar-links a');
+    toggleBtn.addEventListener('click', (event) => {
+        if(toggleBtn.getAttribute('href') === '#'){
+            event.preventDefault();
+        }
         navbarLinks.classList.toggle('active');
     });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarLinks.classList.remove('active');
+        })
+    })
 });
 
 function scrollFunction() {
