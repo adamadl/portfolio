@@ -18,6 +18,10 @@ body {
 
 /* Header */
 
+a{
+    text-decoration: none;
+}
+
 .navbar{
     background-color: transparent;
     /* padding: 50px; */
@@ -168,23 +172,23 @@ h3{
     padding-top: 20px;
 }
 
-/* a button{
+a button{
    cursor: pointer; 
    transition: 0.2s;
 }
 
 a button:hover{
     background-color: black;
-} */
+}
 
-/* button {
+button {
     border: none;
     border-radius: 8px;
     background: #4e535c;
     padding: 8px 20px;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
-} */
+}
 
 .socials{
     display: flex;
@@ -263,7 +267,7 @@ a button:hover{
     justify-content: center;
     align-items: center;
     padding-bottom: 80px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .project-subtitle{
@@ -276,6 +280,25 @@ a button:hover{
 
 .project-img{
     width: 300px;
+    height: 200px;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    height: 450px;
+}
+
+.project p{
+    width: 300px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Contact */
@@ -417,6 +440,8 @@ a button:hover{
 
     .information{
         grid-template-columns: 1fr;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     
     .project-section{
